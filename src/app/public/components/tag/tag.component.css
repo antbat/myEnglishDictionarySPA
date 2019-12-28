@@ -1,0 +1,14 @@
+.tag {
+    padding: 2px;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+}
+.tag-name {
+    margin: 0;
+    padding: 0;
+}
+.tag-counter {
+    color: gray;
+}
