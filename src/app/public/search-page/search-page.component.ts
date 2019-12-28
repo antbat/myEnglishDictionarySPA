@@ -7,6 +7,7 @@ import {SearchService} from '../service/search/search.service';
   templateUrl: './search-page.component.html',
   styleUrls: ['./search-page.component.css']
 })
+
 export class SearchPageComponent implements OnInit {
     results: SearchResult;
     loading: boolean;
@@ -15,8 +16,8 @@ export class SearchPageComponent implements OnInit {
         private searchService: SearchService
     ) { }
     ngOnInit() {
-        this.searchService.word('g*').subscribe( data => {
-            // data.words = [];
+        this.searchService.word('*').subscribe( data => {
+            data.words = [];
             this.results = data;
         });
     }

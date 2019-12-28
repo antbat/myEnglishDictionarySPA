@@ -8,10 +8,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { PublicModule } from './public/public.module';
 import { SearchPageComponent } from './public/search-page/search-page.component';
 import {WordPageComponent} from './public/word-page/word-page.component';
+import {EntryPageComponent} from './public/entry-page/entry-page.component';
 
 const appRoutes: Routes = [
     { path: 'search', component: SearchPageComponent},
     { path: 'word/:id', component: WordPageComponent},
+    { path: 'entry/:id', component: EntryPageComponent},
     { path: '', redirectTo: '/search', pathMatch: 'full'}
 ];
 

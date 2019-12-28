@@ -8,6 +8,7 @@ import {WordService} from '../../service/word/word.service';
   styleUrls: ['./word.component.css']
 })
 export class WordComponent implements OnInit {
+    url = '/';
     word: Word;
     tags: {
         to: Word,
@@ -15,6 +16,7 @@ export class WordComponent implements OnInit {
     }[] = [];
     @Input() set data(one: Word) {
         this.word = one;
+        this.url = one.tuple.length === 0 ? `/word/${one._id}` : `/entry/${one._id}`;
         if (one && one.tags && one.tags.length > 0) {
             one.tags.forEach( tag => {
                 Promise.all([
@@ -34,5 +36,4 @@ export class WordComponent implements OnInit {
     ) { }
     ngOnInit() {
     }
-
 }

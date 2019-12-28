@@ -1,5 +1,5 @@
 <div class="word-container">
-    <a routerLink="/word/{{word?._id}}"> {{word?.text}}</a>
+    <a [routerLink]="url"> {{word?.text}}</a>
     <div *ngIf="word?.tags?.length" class="tag-container">
         <div class="tag" *ngFor="let one of tags">
             <div title="what" class="relation-tag">{{one?.what?.text}}</div>

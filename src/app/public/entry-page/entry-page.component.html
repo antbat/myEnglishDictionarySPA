@@ -1,0 +1,5 @@
+<a routerLink="/">search</a>
+/
+<a routerLink="/word/{{(one$|async)?.tuple[0]}}">{{(one$|async)?.text?.split('|')[0]}}</a>
+/
+<span>{{(one$|async)?.text}}</span>

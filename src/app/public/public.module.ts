@@ -8,6 +8,7 @@ import { TagComponent } from './components/tag/tag.component';
 import { WordComponent } from './components/word/word.component';
 import {RouterModule} from '@angular/router';
 import { WordPageComponent } from './word-page/word-page.component';
+import { EntryPageComponent } from './entry-page/entry-page.component';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { WordPageComponent } from './word-page/word-page.component';
         SearchBoxComponent,
         TagComponent,
         WordComponent,
-        WordPageComponent
+        WordPageComponent,
+        EntryPageComponent
     ],
     imports: [
         CommonModule,
