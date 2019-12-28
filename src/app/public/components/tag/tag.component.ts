@@ -15,7 +15,7 @@ export class TagComponent implements OnInit {
         this.wordService
             .getWordById(item.wordId)
             .then( word => this.word = word );
-        this.count = item.count;
+        this.count = item.count || 0;
     }
     constructor(
         private wordService: WordService

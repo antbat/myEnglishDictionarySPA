@@ -15,8 +15,8 @@ export class SearchPageComponent implements OnInit {
         private searchService: SearchService
     ) { }
     ngOnInit() {
-        this.searchService.word('*').subscribe( data => {
-            data.words = [];
+        this.searchService.word('g*').subscribe( data => {
+            // data.words = [];
             this.results = data;
         });
     }

@@ -1,0 +1,5 @@
+input.form-control {
+    font-size: medium;
+    padding: 4px;
+    flex: auto 1 1;
+}

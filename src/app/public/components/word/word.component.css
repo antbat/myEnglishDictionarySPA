@@ -1,0 +1,24 @@
+.word-container {
+    /*background-color: antiquewhite;*/
+}
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 1px dashed gray;
+    margin: 10px 10px 10px 50px;
+}
+.tag {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid green;
+    margin: 3px;
+}
+.relation-tag {
+    padding: 3px;
+    color: gray;
+}
+.word-tag {
+    padding: 3px;
+    background-color: green;
+}

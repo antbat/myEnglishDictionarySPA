@@ -1,13 +1,23 @@
-.word-list-container {
-    margin-right: 30px;
-}
-.tag-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
 .result-container {
     display: flex;
     flex-direction: row;
+    padding: 10px 30px 0 30px;
 }
+
+.tag-container {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-content: end;
+}
+.word-list-container {
+    flex: 1 1 50%;
+    margin-left: 20px;
+    border-left: 1px solid gray;
+    padding-left: 20px;
+}
+
+

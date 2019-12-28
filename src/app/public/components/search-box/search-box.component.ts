@@ -1,9 +1,9 @@
 import {Component, ElementRef, EventEmitter, Inject, OnInit, Output} from '@angular/core';
-import { SearchResult } from '../models/SearchResult';
+import { SearchResult } from '../../models/SearchResult';
 import {fromEvent} from 'rxjs';
 import {debounceTime, filter, map, switchAll, tap} from 'rxjs/operators';
-import {SearchService} from '../service/search/search.service';
-import {WordService} from '../service/word/word.service';
+import {SearchService} from '../../service/search/search.service';
+import {WordService} from '../../service/word/word.service';
 
 @Component({
   selector: 'app-search-box',
@@ -23,8 +23,8 @@ export class SearchBoxComponent implements OnInit {
     ngOnInit() {
         fromEvent(this.el.nativeElement, 'keyup')
             .pipe(
-                map((e: any) => e.target.value), // extract the value of the input
-                filter((text: string) => text.length > 1), // filter out if empty
+                map((e: any) => e.target.value || '*'), // extract the value of the input
+                filter((text: string) => text.length >= 1), // filter out if empty
                 debounceTime(250), // only once every 250ms
                 tap(() => this.loading.emit(true)), // enable loading
                 // search, discarding old events if new input comes in
