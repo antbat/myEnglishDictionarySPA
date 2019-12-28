@@ -1,0 +1,15 @@
+<app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
+<div class="result-container">
+    <span *ngIf="loading">loading>...</span>
+    <ul class="word-list-container ">
+        <li *ngFor="let word of results?.words">
+            {{word?.text}}
+        </li>
+    </ul>
+    <div class="tag-container">
+        <app-tag [data]="tag" *ngFor="let tag of results?.aggregations"></app-tag>
+    </div>
+</div>
+
+
+
